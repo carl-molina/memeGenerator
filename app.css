@@ -1,56 +1,42 @@
-body {
-  margin: 0px;
-  padding: 0px;
-}
-h1, p {
-  margin: 0px;
-  padding: 1%;
-  text-align: center;
+#meme-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  height: 1000px;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  /* background-color: lightblue; */
 }
 
-#add-meme {
+.completed-meme {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  margin: 0px;
-  padding: 50px;
-  background-color: rgb(179, 179, 179);
 }
 
-.input-box {
-  width: 50%;
-  margin: 10px;
+.completed-meme:hover {
+  filter: brightness(0.5);
+  opacity: 1;
 }
 
-.meme-button {
+.text-top {
   position: absolute;
-  padding: 10px;
-  right: 49%;
-  background-color: rgb(25, 99, 201);
-  color: white;
+  align-self: flex-start;
 }
 
-/* #meme-area {
-
-} */
-
-.container {
-  position: relative;
-  width: 40%;
-  height: 40%;
+.text-center {
+  position: absolute;
+  align-self: center;
 }
 
-.container:hover {
-  filter: brightness(0.5);
+.text-bottom {
+  position: absolute;
+  align-self: flex-end;
 }
-
-.image {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-}
-
-/* .image:hover {
-  filter: brightness(0.5);
-} */
 
 .meme-text {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -65,18 +51,25 @@ h1, p {
   color: red;
 }
 
-.text-top {
+.hover-text {
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translate(-50%);
+  align-self: center;
+  overflow: hidden;
+  color: red;
+  font-size: 20rem;
+  text-align: center;
+  opacity: 0;
 }
 
-.text-bottom {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translate(-50%);
+.completed-meme:hover .hover-text {
+  opacity: 1;
+}
+
+
+/*
+
+.meme-text:hover {
+  color: red;
 }
 
 .hover-text {
@@ -93,4 +86,4 @@ h1, p {
 
 .hover-text:hover {
   opacity: 1;
-}
+} */
